@@ -1,32 +1,42 @@
+const title = 'Onyx Storm';
+const author = 'Rebecca Yarros';
+const img = './images/book1.jpg';
+
+const firstBook = {
+  author: 'Jordan More',
+  title: 'Interesting Facts For Curious Minds',
+  img: './images/book1.jpg',
+};
+
+const secondBook = {
+  author: 'James Clear',
+  title: 'Atomic Habits',
+  img: './images/book2.jpg',
+};
+
 export const BookList = () => {
   return (
     <section className='booklist'>
-      <Book />
-      <Book />
-      <Book />
-      <Book />
+      <Book
+        author={firstBook.author}
+        title={firstBook.title}
+        img={firstBook.img}
+      />
+      <Book
+        author={secondBook.author}
+        title={secondBook.title}
+        img={secondBook.img}
+      />
     </section>
   );
 };
 
-const Book = () => {
+const Book = ({ img, title, author }) => {
   return (
     <article className='book'>
-      <Image />
-      <Title />
-      <Author />
+      <img src={img} alt='' />
+      <h2>{title}</h2>
+      <h4>{author.toUpperCase()}</h4>
     </article>
   );
-};
-
-const Image = () => <img src='./images/book1.jpg' alt='' />;
-const Title = () => <h2>Onyx Storm</h2>;
-const Author = () => {
-  const inlineHeadingStyles = {
-    color: '#617d98',
-    fontSize: '0.75rem',
-    marginTop: '0.5rem',
-  };
-
-  return <h4 style={inlineHeadingStyles}>Rebecca Yarros</h4>;
 };

@@ -19,13 +19,14 @@ const Book = () => {
   );
 };
 
-const Image = () => (
-  <img
-    src='https://m.media-amazon.com/images/I/71HMJiEu7JL._SY466_.jpg'
-    alt=''
-  />
-);
+const Image = () => <img src='./images/book1.jpg' alt='' />;
 const Title = () => <h2>Onyx Storm</h2>;
 const Author = () => {
-  return <h4>Rebecca Yarros</h4>;
+  const inlineHeadingStyles = {
+    color: '#617d98',
+    fontSize: '0.75rem',
+    marginTop: '0.5rem',
+  };
+
+  return <h4 style={inlineHeadingStyles}>Rebecca Yarros</h4>;
 };

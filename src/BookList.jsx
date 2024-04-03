@@ -1,6 +1,6 @@
 export const BookList = () => {
   return (
-    <section>
+    <section className='booklist'>
       <Book />
       <Book />
       <Book />
@@ -11,7 +11,7 @@ export const BookList = () => {
 
 const Book = () => {
   return (
-    <article>
+    <article className='book'>
       <Image />
       <Title />
       <Author />
@@ -21,7 +21,7 @@ const Book = () => {
 
 const Image = () => (
   <img
-    src='https://images-na.ssl-images-amazon.com/images/I/71HMJiEu7JL._AC_UL600_SR600,400_.jpg'
+    src='https://m.media-amazon.com/images/I/71HMJiEu7JL._SY466_.jpg'
     alt=''
   />
 );

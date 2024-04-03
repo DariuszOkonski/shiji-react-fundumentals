@@ -1,10 +1,18 @@
 function Greeting() {
   return (
     <div>
-      <h1>My First Component</h1>
-      <h2>Hi</h2>
+      <Person />
+      <Message />
     </div>
   );
 }
 
 export default Greeting;
+
+const Message = () => {
+  return <p>this is my message</p>;
+};
+
+const Person = () => {
+  return <h1>John Doe</h1>;
+};
